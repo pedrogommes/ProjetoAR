@@ -9,12 +9,14 @@
   </head>
   <body>
     <a-scene embedded arjs>
-      <a-marker preset="custom" type="pattern" url="pattern-marker.patt">
+      <a-asset>
         <a-asset-item
           id="car8"
-          src="models/1997_-_honda_civic_type-r__rigged/scene.gltf"
+          src="models/honda/scene.gltf"
         ></a-asset-item>
+      </a-asset>
 
+      <a-marker preset="hiro">
         <a-entity
           gltf-model="#car8"
           scale="1 1 1"
@@ -24,7 +26,7 @@
         ></a-entity>
       </a-marker>
 
-      <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
+      <a-entity camera ></a-entity>
     </a-scene>
   </body>
 </html>
